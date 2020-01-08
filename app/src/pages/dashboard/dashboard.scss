@@ -1,0 +1,229 @@
+.bgContentColor {
+  background-color: #5a308b !important;
+}
+page-dashboard {
+    .display_none {
+        display: none;
+    }
+    ion-navbar.toolbar {
+        padding: 1px 1px;
+    }
+    .circle img {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+    }
+    img.header-logo-img {
+        height: 58px;
+    }
+    .dashboard-back-img>.row {
+        height: 20%;
+        align-items: center !important;
+        display: flex !important;
+    }
+    .circle {
+        width: 55px;
+        height: 55px;
+        border-radius: 64px;
+    }
+    .dashboard-back-img {
+        height: 100%;
+        // background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../../assets/imgs/dashboard-back-img.jpg");
+        background-image: url("../assets/imgs/dashboard-back-img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 38%;
+        background-size: 53% 63%;
+    }
+    .padding-top-2-per {
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .icon_middle_one {
+        margin-top: -15%;
+        margin-left: 15%;
+    }
+    .dashboard-icon {
+        position: absolute;
+        width: 110px;
+        font-size: 12px;
+        //text-align: center;
+    }
+    // @media screen and (min-height: 700px) {
+    //     .dashboard-back-img {
+    //         background-position: 10% 40%;
+    //     }
+    // }
+    .footer-icon {
+        height: 40px;
+    }
+    .toolbar-background-md{
+      background: #fff !important;
+    }
+    .scroll-content{
+      overflow-y: hidden !important;
+    }
+}
+
+.bgBlue{
+  background: #5c5da1 !important;
+}
+
+.whiteImg{
+  background: #ffffff;
+}
+
+.card{
+  width: 100% !important;
+  border-radius: 8% !important;
+}
+
+.grid{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-card img{
+  width: 50% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.colheight80{
+  height: 108px !important;
+}
+
+
+.colheight {
+  height: 375px !important;
+}
+
+.rowcolheight {
+  height: 33.3% !important;
+  padding: 1px !important;
+}
+
+.rowcolheight1 {
+  height: 15% !important;
+}
+.rowcolheight2 {
+  height: 84% !important;
+}
+
+.height100 {
+  height: 100% !important;
+}
+
+.cardwidth {
+  height: 90% !important;
+}
+p{
+  color: #fff !important;
+}
+
+p img{
+  width: 31px !important;
+  height: 31px !important;
+}
+
+.card-content-md{
+  padding: 0 !important;
+}
+
+.card-md{
+  margin: 0 !important;
+}
+
+.card-md p{
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 320px) , (min-height: 568px) {
+  .colheight {
+    height: 327px !important; //changed
+  }
+  .colheight80 {
+    height: 111px !important; //changes
+  }
+}
+
+@media screen and (min-width: 360px) , (min-height: 600px) {
+  .colheight {
+    height: 395px !important;
+  }
+
+  .colheight80 {
+    height: 106px !important;
+  }
+}
+
+@media screen and (min-width: 375px) , (min-height: 665px) {
+  .colheight {
+    height: 420px !important; //changed
+  }
+  .colheight80 {
+    height: 120px !important; //changes
+  }
+}
+
+@media screen and (min-width: 414px) , (min-height: 700px) {
+  .colheight {
+    height: 493px !important; //changed
+  }
+  .colheight80 {
+    height: 120px !important; //changed
+  }
+}
+
+
+
+
+@media screen and (min-height: 800px) {
+  .colheight {
+    height: 536px !important; //changed
+  }
+  .colheight80 {
+    height: 145px !important; //changed
+  }
+}
+
+
+@media screen and (min-width: 411px) , (min-height: 823px) {
+  .colheight {
+    height: 541px !important; //changes
+  }
+  .colheight80 {
+    height: 145px !important; //changes
+  }
+}
+
+@media screen and (min-width: 411px) ,(min-height: 731px) {
+  .colheight {
+    height: 466px !important;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .colheight {
+    height: 700px !important; //changed
+  }
+  .colheight80 {
+    height: 195px !important; //changed
+  }
+}
+
+
+
+
+
+ion-app.md [padding] .scroll-content{
+  padding: 0 !important;
+}
+.footer-img{
+  height: 53px !important;
+  width: 100% !important;
+}
+
+
+
