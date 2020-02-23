@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopicsContentPageModule", function() { return TopicsContentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__topics_content__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__topics_content__ = __webpack_require__(733);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -35,7 +35,7 @@ TopicsContentPageModule = __decorate([
 
 /***/ }),
 
-/***/ 714:
+/***/ 715:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10641,7 +10641,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 715:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10652,7 +10652,7 @@ return jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(714);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(715);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10670,12 +10670,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 let AppServices = class AppServices {
-    //  public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
+    // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
     constructor(http, nav, photoViewer) {
         this.http = http;
         this.nav = nav;
         this.photoViewer = photoViewer;
-        this.serviceURl = "http://64.94.164.16/Pathfinder-Digitaltool/api/";
+        // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool/api/"
+        this.serviceURl = "https://algomtech.com/pathf/api/";
         //  this.AuthToken =  localStorage.getItem('AuthToken');
         //  // console.log(this.AuthToken);
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
@@ -10850,7 +10851,7 @@ AppServices = __decorate([
 
 /***/ }),
 
-/***/ 734:
+/***/ 733:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10858,10 +10859,13 @@ AppServices = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(716);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_service__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(714);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_video_player_ngx__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_transfer__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(357);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10877,18 +10881,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 let TopicsContentPage = class TopicsContentPage {
-    constructor(navCtrl, navParams, eNumValue, platform, _appService, loadingCtrl, databaseprovider) {
+    constructor(navCtrl, navParams, eNumValue, platform, _appService, loadingCtrl, databaseprovider, transfer, file, videoPlayer) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.eNumValue = eNumValue;
         this._appService = _appService;
         this.loadingCtrl = loadingCtrl;
         this.databaseprovider = databaseprovider;
+        this.transfer = transfer;
+        this.file = file;
+        this.videoPlayer = videoPlayer;
         // _imageViewerCtrl: ImageViewerController;
         this.setLanguage = { Create_Your_Profile: "", Tap_to_here_to_create_your_profile: "" };
         this.slideIndex = 1;
         this.langOption = ["English", "हिंदी", "मराठी"];
+        this.fileTransfer = this.transfer.create();
         this.loadingPopup = this.loadingCtrl.create({
             spinner: 'hide',
             content: `
@@ -10902,11 +10913,18 @@ let TopicsContentPage = class TopicsContentPage {
     }
     ngOnInit() {
         var ths = this;
-        __WEBPACK_IMPORTED_MODULE_5_jquery__(document).ready(function () {
-            __WEBPACK_IMPORTED_MODULE_5_jquery__(".Topic-Details").click(function (e) {
+        __WEBPACK_IMPORTED_MODULE_6_jquery__(document).ready(function () {
+            __WEBPACK_IMPORTED_MODULE_6_jquery__(".Topic-Details").click(function (e) {
                 var event = e;
                 ths._appService.onimgclick(e);
             });
+        });
+        const url = 'http://algomtech.com/pathf/uploads/dmpa/11_DMPA_WhentoStart_DMPA-01.png';
+        this.fileTransfer.download(url, this.file.dataDirectory + '11_DMPA_WhentoStart_DMPA-01.png').then((entry) => {
+            console.log('download complete: ' + entry.toURL());
+            alert('download complete: ' + entry.toURL());
+        }, (error) => {
+            // handle error
         });
     }
     ionViewDidLoad() {
@@ -10932,11 +10950,14 @@ let TopicsContentPage = class TopicsContentPage {
         var topicIndex = this.navParams.get('topicIndex');
         //var TopicName = selectTopicDetail;
         this.topicIndex = topicIndex;
+        this.imgSrc = '';
         if (topicIndex === 1) {
             this.TopicName = 'At a Glance';
+            this.imgSrc = '';
         }
         if (topicIndex === 2) {
             this.TopicName = 'Technicle Updates';
+            this.imgSrc = 'assets/imgs/4_DMPA_Technical_update.png';
         }
         if (topicIndex === 3) {
             this.TopicName = 'Effectiveness';
@@ -10946,6 +10967,11 @@ let TopicsContentPage = class TopicsContentPage {
         }
         if (topicIndex === 5) {
             this.TopicName = 'Limitations';
+            this.imgSrc = 'assets/imgs/6_DMPA-Limitation.png';
+        }
+        if (topicIndex === 6) {
+            this.TopicName = 'Screening';
+            this.imgSrc = 'assets/imgs/7_DMPA-Screening_Parameters.png';
         }
         //this.TopicName=selectTopicDetail.TopicName;
         //this.TopicName=selectTopicDetail;
@@ -10970,11 +10996,19 @@ let TopicsContentPage = class TopicsContentPage {
                 myHtml += data[i].Content;
                 myHtml += "</div>";
             }
-            __WEBPACK_IMPORTED_MODULE_5_jquery__('.Topic-Details').html(myHtml);
+            __WEBPACK_IMPORTED_MODULE_6_jquery__('.Topic-Details').html(myHtml);
             this.slideIndex = parseInt(topicIndex) + 1;
             this.showSlides(this.slideIndex);
         }, err => {
             this.loadingPopup.dismiss();
+        });
+    }
+    openVid() {
+        // Playing a video.
+        this.videoPlayer.play('https://youtu.be/MYkM36CdixE').then(() => {
+            console.log('video completed');
+        }).catch(err => {
+            console.log(err);
         });
     }
     swipe(event) {
@@ -10996,18 +11030,18 @@ let TopicsContentPage = class TopicsContentPage {
                 myHtml += data[i];
                 myHtml += "</div>";
             }
-            __WEBPACK_IMPORTED_MODULE_5_jquery__('.Topic-Details').html(myHtml);
+            __WEBPACK_IMPORTED_MODULE_6_jquery__('.Topic-Details').html(myHtml);
             var slideIndex = 1;
             this.showSlides(slideIndex);
         }
         else {
-            __WEBPACK_IMPORTED_MODULE_5_jquery__('.Topic-Details').html(content);
-            __WEBPACK_IMPORTED_MODULE_5_jquery__(".forward").css("display", "none");
-            __WEBPACK_IMPORTED_MODULE_5_jquery__(".previous").css("display", "none");
+            __WEBPACK_IMPORTED_MODULE_6_jquery__('.Topic-Details').html(content);
+            __WEBPACK_IMPORTED_MODULE_6_jquery__(".forward").css("display", "none");
+            __WEBPACK_IMPORTED_MODULE_6_jquery__(".previous").css("display", "none");
         }
     }
     plusSlides(n) {
-        var slides = __WEBPACK_IMPORTED_MODULE_5_jquery__(".mySlides");
+        var slides = __WEBPACK_IMPORTED_MODULE_6_jquery__(".mySlides");
         if (this.slideIndex == slides.length || slides.length == "1") {
             return false;
         }
@@ -11028,18 +11062,18 @@ let TopicsContentPage = class TopicsContentPage {
     }
     showSlides(n) {
         var i;
-        var slides = __WEBPACK_IMPORTED_MODULE_5_jquery__(".mySlides");
-        var dots = __WEBPACK_IMPORTED_MODULE_5_jquery__(".dot");
+        var slides = __WEBPACK_IMPORTED_MODULE_6_jquery__(".mySlides");
+        var dots = __WEBPACK_IMPORTED_MODULE_6_jquery__(".dot");
         if (slides.length == 1) {
             return false;
         }
-        __WEBPACK_IMPORTED_MODULE_5_jquery__(".forward").css("display", "inline-block");
-        __WEBPACK_IMPORTED_MODULE_5_jquery__(".previous").css("display", "inline-block");
+        __WEBPACK_IMPORTED_MODULE_6_jquery__(".forward").css("display", "inline-block");
+        __WEBPACK_IMPORTED_MODULE_6_jquery__(".previous").css("display", "inline-block");
         if (n == 1) {
-            __WEBPACK_IMPORTED_MODULE_5_jquery__(".previous").css("display", "none");
+            __WEBPACK_IMPORTED_MODULE_6_jquery__(".previous").css("display", "none");
         }
         else if (n == slides.length) {
-            __WEBPACK_IMPORTED_MODULE_5_jquery__(".forward").css("display", "none");
+            __WEBPACK_IMPORTED_MODULE_6_jquery__(".forward").css("display", "none");
         }
         if (n > slides.length) {
             this.slideIndex = 1;
@@ -11055,7 +11089,7 @@ let TopicsContentPage = class TopicsContentPage {
         }
         slides[this.slideIndex - 1].style.display = "block";
         //  dots[this.slideIndex - 1].className += " active";
-        __WEBPACK_IMPORTED_MODULE_5_jquery__(".scroll-content").scrollTop(0);
+        __WEBPACK_IMPORTED_MODULE_6_jquery__(".scroll-content").scrollTop(0);
     }
     changeLanguage(chooseLanguage) {
         var result = this._appService.changeLanguage(chooseLanguage);
@@ -11072,7 +11106,8 @@ let TopicsContentPage = class TopicsContentPage {
     }
     gotoDashboard() {
         this.updateGetTIme();
-        this.navCtrl.setRoot("DashboardPage");
+        //this.navCtrl.setRoot("DashboardPage");
+        this.navCtrl.setRoot("TopicsListPage", { methodID: 1001 });
     }
     updateGetTIme() {
         const startTime = localStorage.getItem('startTimeMethod');
@@ -11106,11 +11141,19 @@ __decorate([
 ], TopicsContentPage.prototype, "pageTop", void 0);
 TopicsContentPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-topics-content',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/topics-content/topics-content.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row>\n            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal">\n                <img class="left_img_header" src="assets/imgs/fb-icon-logo.png">\n                <!-- <ion-icon ion-start name="md-arrow-round-back" (click)="gotoDashboard();"></ion-icon> -->\n            </ion-col>\n            <!-- <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">\n                <ion-title text-center>{{MethodName}}</ion-title>\n            </ion-col> -->\n            <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">\n                <ion-title text-center>{{TopicName}}</ion-title>\n            </ion-col>\n            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal">\n                <ion-icon name="home" style="zoom:2.3;" color="dark" (click)="gotoDashboard();" float-right></ion-icon>\n                <!-- <img class="right_img_header" src="assets/imgs/pathfinder-icon-logo.png" float-right> -->\n                <!-- <ion-title float-right class="font-size-14" (click)=changeLanguage(chooseLanguage)>{{chooseLanguage}}</ion-title> -->\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n\n</ion-header>\n<ion-content>\n    <ion-grid>\n        <ion-row no-padding>\n            <!-- <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center no-padding>\n                <h5 class="purple">{{TopicName}} </h5>\n            </ion-col> -->\n            <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 class="Topic-Details" (swipe)="swipe($event)">\n              <div *ngIf="topicIndex==1">\n                  <div class="list-type1">\n                    <ol>\n                      <li><a href="javascript:void(0)">Depot Medroxyprogesterone Acetate (DMPA) is a Progestin-only injectable contraceptive</a></li>\n                      <li><a href="javascript:void(0)">Intramuscular (IM) injection of 150mg. every 3 months</a></li>\n                      <li><a href="javascript:void(0)">Safe, highly effective, convenient and can be used with full confidentiality.</a></li>\n                      <li><a href="javascript:void(0)">Menstrual disturbances are common but not harmful</a></li>\n                      <li><a href="javascript:void(0)">Can be safely used in breast feeding women after 6 weeks</a></li>\n                      <li><a href="javascript:void(0)">Return of fertility is delayed by a few months after stopping DMPA injection</a></li>\n                    </ol>\n                  </div>\n\n\n\n                <hr/>\n                <p><img alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/146679e0.jpg" style="width:100%" /></p>\n\n                <p style="text-align:justify"><em>Antara-Injectable Contraceptive DMPA (IM) in the National Family Planning Program,India</em></p>\n\n                <hr/>\n\n              </div>\n              <div *ngIf="topicIndex==2">\n                <div class="card card-2">\n                <p><span style="color:#800080"><strong>Composition:</strong></span></p>\n                <div class="list-type1">\n                  <ol>\n                    <li>\n                      <a href="javascript:void(0)">\n                          Synthetic form of progesterone resembling the natural female hormone containing an aqueous suspension of microcrystal of pregnane 17 alfa - hydroxyprogesterone\n                      </a>\n                    </li>\n                    <li>\n                      <a href="javascript:void(0)">\n                          There is a slow release of hormone into the blood stream over 3 months\n                      </a>\n                    </li>\n                  </ol>\n                </div>\n                </div>\n\n                <div class="card card-2">\n                    <p><span style="color:#800080"><strong>Mechanism of Action:</strong></span></p>\n                    <img alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image105.png" style="width:100%" />\n                </div>\n\n                <div class="card card-2">\n                    <p><span style="color:#800080"><strong>Routes of Administration:</strong></span></p>\n\n                    <p>Depot MedroxyProgesterone Acetate is available as :</p>\n\n                    <p align="center"><img alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/DMPA-IM.jpg" style="width:100%" /></p>\n                    <div class="">\n                      <p style="text-align: center;">DMPA-IM</p>\n\n                      <p style="text-align:center">Intramuscular DMPA-IM (Antara) :Single dose vial 150mg with disposable syringe and needle(over the deltoid or gluteal region)</p>\n                    </div>\n                </div>\n\n                <div class="card card-2">\n                <p align="center"><img alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/DMPA-SC.jpg" style="width:90%" /></p>\n                  <div class="">\n                      <p style="text-align: center;">DMPA-SC</p>\n                      <p style="text-align:center">Subcutaneous DMPA-SC : Prefilled auto disable syringe in Uniject system 104 mg (squeezing bulb pushes the fluid through the needle)</p>\n                  </div>\n                </div>\n              </div>\n              <div *ngIf="topicIndex==3">\n                  <div class="list-type1">\n                      <ol>\n                        <li><a href="javascript:void(0)">DMPA is a highly effective contraceptive method.</a></li>\n                        <li><a href="javascript:void(0)">With <span style="color:#0076BC">perfect use</span> first year effectiveness is 99.7%-</a></li>\n                        <li><a href="javascript:void(0)">With <span style="color:#0076BC">typical use</span>effectiveness decreases to 97%</a></li>\n                      </ol>\n                    </div>\n\n                    <div class="card card-2">\n                        <p><span style="color:#800080"><strong>Effectiveness depends on :</strong></span></p>\n                        <div class="list-type1">\n                          <ol>\n                              <li><a href="javascript:void(0)">Timing of first injection</a></li>\n                              <li><a href="javascript:void(0)">Taking injections regularly</a></li>\n                              <li><a href="javascript:void(0)">The injection technique</a></li>\n                            <li><a href="javascript:void(0)">Post injection care</a></li>\n                          </ol>\n                          </div>\n                      </div>\n\n                      <hr/>\n                    <p><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image44.png" style="width:100%" /></p>\n\n                    <hr/>\n              </div>\n              <div *ngIf="topicIndex==4">\n                <div class="card card-2">\n                  <p><span style="color:#800080">Contraceptive Benefits:</span></p>\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/SafeAndEffective.png" style="width:100%" /></p>\n                  <p style="text-align:center">Safe, highly effective</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/Easy-Convenient.png" style="width:100%" /></p>\n                  <p style="text-align:center">Convenient and easy to use (does not require daily routine)</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/3months.png" style="width:100%" /></p>\n                  <p style="text-align:center">Acts for 3 months with a grace period of 4 weeks</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image8.png" style="width:34%" /></p>\n                  <p style="text-align:center">Completely reversible : Pregnancy in 7-10 months from date of last injection</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image3.jpg" style="width:100%" /></p>\n                  <p style="text-align:center">Private and confidential</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image4.png" style="width:100%" /></p>\n\n                  <p style="text-align:center">Can be given to women who are not eligible to use an estrogen containing contraceptive</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image5.png" style="width:42%" /></p>\n\n                  <p style="text-align:center">Suitable for breast feeding women (after 6 weeks postpartum) as it does not affect quantity,quality and composition of breast milk</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/605ee882.png" style="width:42%" /></p>\n\n                  <p style="text-align:center">Provides immediate postpartum (in non-breastfeeding women) and post-abortion contraception</p>\n                </div>\n                <div class="card card-2">\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/image6.png" style="width:100%" /></p>\n\n                  <p style="text-align:center">Does not interfere with sexual intercourse/pleasure</p>\n                </div>\n                <div class="card card-2">\n                  <p><span style="color:#800080">Non-Contraceptive Benefits:</span></p>\n\n                  <p align="center"><img class="img300" alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/dmpabenefit.png" style="width:100%" /></p>\n\n                </div>\n              </div>\n              <div *ngIf="topicIndex==5">\n                <div class="card card-2">\n                  <p><img alt="" src="http://64.94.164.16/Pathfinder-Digitaltool/assets/admin/ckeditor/plugins/imageuploader/uploads/dmpabenefit.png" style="height:260px; width:100%" /></p>\n                </div>\n              </div>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n<ion-footer>\n    <ion-grid class="footer_Grid">\n        <ion-row>\n            <ion-col col-3>\n                <img src="assets/imgs/back.png" height="35px" ion-start (click)="gotoTopicListPage();">\n                <!-- <ion-icon ion-start class="footer-Icon" name="md-arrow-back" (click)="gotoTopicListPage();"></ion-icon> -->\n            </ion-col>\n            <!-- <ion-col col-3 text-center>\n                <img src="assets/imgs/prev.png" class="previous" height="35px" ion-start (click)="previousSlides(-1);">\n            </ion-col>\n            <ion-col col-3 text-center>\n                <img src="assets/imgs/next.png" class="forward" height="35px" ion-start (click)="plusSlides(1);">\n            </ion-col> -->\n            <ion-col col-3>\n                <!-- <div float-right (click)=changeLanguage(chooseLanguage)><img class="footer_language_icon" [src]="languageIcon"></div> -->\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-footer>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/topics-content/topics-content.html"*/,
+        selector: 'page-topics-content',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/topics-content/topics-content.html"*/'<ion-header class="headerbg">\n  <ion-navbar>\n      <ion-row>\n          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">\n              <img class="left_img_header" src="assets/imgs/left-arrow.png" height="35px" float-left>\n              <!-- <ion-icon  name="md-arrow-round-back" (click)="gotoDashboard();"></ion-icon> -->\n          </ion-col>\n          <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">\n              <ion-title text-center>{{TopicName}}</ion-title>\n          </ion-col>\n          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">\n              <img class="right_img_header" src="assets/imgs/menu-icon.png" float-right>\n              <!-- <ion-title float-right class="font-size-14" (click)=changeLanguage(chooseLanguage)>{{chooseLanguage}}</ion-title> -->\n          </ion-col>\n      </ion-row>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-grid>\n      <ion-row no-padding>\n        <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding (click)="openVid();">\n          <img src="assets/imgs/dmpa-video.png">\n        </ion-col>\n        <ion-col *ngIf="imgSrc !== \'\'" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding (click)="openVid();">\n          <img src="{{imgSrc}}">\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/topics-content/topics-content.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */], __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_database_service__["a" /* DatabaseProvider */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_database_service__["a" /* DatabaseProvider */],
+        __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_transfer__["a" /* FileTransfer */],
+        __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */],
+        __WEBPACK_IMPORTED_MODULE_5__ionic_native_video_player_ngx__["a" /* VideoPlayer */]])
 ], TopicsContentPage);
 
 //# sourceMappingURL=topics-content.js.map

@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { FileTransfer} from '@ionic-native/file-transfer';
+import { FileTransfer, FileUploadOptions, FileTransferObject} from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { SQLite } from '@ionic-native/sqlite';
 import { DatabaseProvider } from '../providers/database.service'
@@ -13,6 +13,7 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { MyApp } from './app.component';
 import { Device } from '@ionic-native/device';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
   import { IonicImageViewerModule } from 'ionic-img-viewer';
   import { PhotoViewer } from '@ionic-native/photo-viewer';
   import { Zip } from '@ionic-native/zip';
@@ -42,6 +43,7 @@ import { Device } from '@ionic-native/device';
     SQLitePorter,
     File,
     FileTransfer,
+    VideoPlayer,
     TextToSpeech,
     PhotoViewer ,
     Zip,

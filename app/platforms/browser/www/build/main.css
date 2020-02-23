@@ -1,3 +1,4 @@
+@import url(../../assets/bootstrap.min.css);
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -36914,12 +36915,232 @@ page-ask-us .font-small {
   font-size: 8px;
 }
 
-.bgContentColor {
-  background-color: #5a308b !important;
+page-dashboard {
+}
+
+page-dashboard .scroll-content {
+  overflow-y: hidden !important;
+}
+
+page-dashboard .bg-div {
+  background-image: url("../assets/img/background.jpg");
+  padding: 1.5vw 1.5vw 0;
+  line-height: 2.9vw;
+  background-repeat: round;
+}
+
+page-dashboard .bg-div a {
+  color: white;
+}
+
+page-dashboard .bg-div a:hover, page-dashboard .bg-div a:active, page-dashboard .bg-div a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-dashboard .button-div {
+  padding: .5vw;
+}
+
+page-dashboard .button-col {
+  margin-bottom: 1vw;
+}
+
+page-dashboard .button-sec {
+  background-color: #ffffff26;
+  border-radius: 2vw;
+}
+
+page-dashboard .button_logo {
+  width: auto;
+  padding: 1vw;
+}
+
+page-dashboard .bg-mid-img {
+  background-color: #FFFFFF;
+  border-radius: 2vw 2vw 0 0;
+  height: 100%;
+}
+
+page-dashboard .mid-img {
+  background-image: url("../assets/img/img1.png"), url("../assets/img/img3.png");
+  background-position: 50% 7vh, 45% 12vh;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+page-dashboard .bg-footer {
+  background-color: #FFFFFF;
+}
+
+page-dashboard .header-menu {
+  background-color: #006CA5;
+  padding: 2vw 0;
+}
+
+page-dashboard .contraceptive_bg {
+  padding: 1vw 2vw 17vw;
+}
+
+page-dashboard .section-heading {
+  padding-top: 1vw;
+}
+
+page-dashboard .button_dmpa {
+  background-color: #4B8BB9;
+}
+
+page-dashboard .button_iucd {
+  background-color: #C33E39;
+}
+
+page-dashboard .button_coc {
+  background-color: #CB6131;
+}
+
+page-dashboard .button_cent {
+  background-color: #2EA7BA;
+}
+
+page-dashboard .button_cond {
+  background-color: #3EA391;
+}
+
+page-dashboard .button_ecp {
+  background-color: #E47837;
+}
+
+page-dashboard .button_m_ster {
+  background-color: #82A33A;
+}
+
+page-dashboard .button_f_ster {
+  background-color: #7F9AA5;
+}
+
+page-dashboard .contraceptive_bg a {
+  color: white;
+}
+
+page-dashboard .contraceptive_bg a:hover, page-dashboard .contraceptive_bg a:active, page-dashboard .contraceptive_bg a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-dashboard .button_contra {
+  border-radius: 1vw;
+  padding: 5vw 2vw 2vw;
+}
+
+@media screen and (max-width: 425px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 12vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 14vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 3vw;
+  }
+  page-dashboard .mid-img {
+    height: 70vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 2.5vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 17vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 12vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 2.2vw;
+  }
+  page-dashboard .mid-img {
+    height: 70vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 2vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 15vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 9vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 9.5vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 2vw;
+  }
+  page-dashboard .mid-img {
+    height: 100%;
+    background-position: 50% 2vh, 45% 15vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 5vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 1.5vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 8vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 2.5vw;
+  }
 }
 
 page-dashboard .display_none {
   display: none;
+}
+
+page-dashboard .footer-img {
+  height: 53px !important;
+  width: 100% !important;
+}
+
+page-dashboard .footer-img2 {
+  height: 30px !important;
+  width: 100% !important;
 }
 
 page-dashboard ion-navbar.toolbar {
@@ -36992,156 +37213,406 @@ page-dashboard .scroll-content {
   overflow-y: hidden !important;
 }
 
-page-dashboard .bgBlue {
+page-dashboard .paddingtop0 {
+  padding-top: 0 !important;
+}
+
+page-dashboard .paddingbottom0 {
+  padding-bottom: 0 !important;
+}
+
+page-dashboard .mar1 {
+  margin-left: 1% !important;
+  margin-right: 1% !important;
+}
+
+page-dashboard .mar2 {
+  margin-left: 2% !important;
+  margin-right: 2% !important;
+}
+
+page-dashboard .height100 {
+  height: 99% !important;
+}
+
+page-dashboard .card-md p {
+  font-size: 1.2rem !important;
+}
+
+page-dashboard .pp1 {
+  padding-right: 1% !important;
+  padding-left: 1% !important;
+}
+
+page-dashboard .pp0 {
+  padding-right: 0% !important;
+  padding-left: 0% !important;
+}
+
+page-dashboard .bg-div {
+  background-image: url("../assets/img/background.jpg");
+  padding: 1.5vw 1.5vw 0;
+  line-height: 2.9vw;
+  background-repeat: round;
+}
+
+page-dashboard .bg-div a {
+  color: white;
+}
+
+page-dashboard .bg-div a:hover, page-dashboard .bg-div a:active, page-dashboard .bg-div a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-dashboard .button-div {
+  padding: .5vw;
+}
+
+page-dashboard .button-col {
+  margin-bottom: 1vw;
+}
+
+page-dashboard .button-sec {
+  background-color: #ffffff26;
+  border-radius: 2vw;
+}
+
+page-dashboard .button_logo {
+  width: auto;
+  padding: 1vw;
+}
+
+page-dashboard .bg-mid-img {
+  background-color: #FFFFFF;
+  border-radius: 2vw 2vw 0 0;
+  height: 100%;
+}
+
+page-dashboard .mid-img {
+  background-image: url("../assets/img/img1.png"), url("../assets/img/img3.png");
+  background-position: 50% 7vh, 45% 12vh;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+page-dashboard .bg-footer {
+  background-color: #FFFFFF;
+}
+
+page-dashboard .header-menu {
+  background-color: #006CA5;
+  padding: 2vw 0;
+}
+
+page-dashboard .contraceptive_bg {
+  padding: 1vw 2vw 17vw;
+}
+
+page-dashboard .section-heading {
+  padding-top: 1vw;
+}
+
+page-dashboard .button_dmpa {
+  background-color: #4B8BB9;
+}
+
+page-dashboard .button_iucd {
+  background-color: #C33E39;
+}
+
+page-dashboard .button_coc {
+  background-color: #CB6131;
+}
+
+page-dashboard .button_cent {
+  background-color: #2EA7BA;
+}
+
+page-dashboard .button_cond {
+  background-color: #3EA391;
+}
+
+page-dashboard .button_ecp {
+  background-color: #E47837;
+}
+
+page-dashboard .button_m_ster {
+  background-color: #82A33A;
+}
+
+page-dashboard .button_f_ster {
+  background-color: #7F9AA5;
+}
+
+page-dashboard .contraceptive_bg a {
+  color: white;
+}
+
+page-dashboard .contraceptive_bg a:hover, page-dashboard .contraceptive_bg a:active, page-dashboard .contraceptive_bg a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-dashboard .button_contra {
+  border-radius: 1vw;
+  padding: 5vw 2vw 2vw;
+}
+
+@media screen and (max-width: 425px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 12vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 14vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 3vw;
+  }
+  page-dashboard .mid-img {
+    height: 70vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 2.5vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 17vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 12vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 2.2vw;
+  }
+  page-dashboard .mid-img {
+    height: 70vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 2vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 15vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  page-dashboard .pathfinder_logo {
+    width: auto;
+    height: 9vw;
+  }
+  page-dashboard .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-dashboard .button_logo {
+    height: 9.5vw;
+  }
+  page-dashboard .button_text, page-dashboard .text-header {
+    font-size: 2vw;
+  }
+  page-dashboard .mid-img {
+    height: 100%;
+    background-position: 50% 2vh, 45% 15vh;
+  }
+  page-dashboard .footer_logo {
+    width: auto;
+    height: 5vw;
+  }
+  page-dashboard .text-footer {
+    font-size: 1.5vw;
+  }
+  page-dashboard .contraceptive_bg {
+    padding: 1vw 2vw 8vw;
+  }
+  page-dashboard .section-heading {
+    font-size: 2.5vw;
+  }
+}
+
+.bgBlue {
   background: #5c5da1 !important;
 }
 
-page-dashboard .whiteImg {
+.whiteImg {
   background: #ffffff;
 }
 
-page-dashboard .card {
+.card {
   width: 100% !important;
-  border-radius: 8% !important;
+  border-radius: 5% !important;
 }
 
-page-dashboard .grid {
+.grid {
   padding: 0 !important;
   margin: 0 !important;
 }
 
-page-dashboard ion-card img {
+ion-card img {
   width: 50% !important;
   margin-right: auto !important;
   margin-left: auto !important;
 }
 
-page-dashboard .colheight80 {
+.colheight80 {
   height: 108px !important;
+  padding-bottom: 0 !important;
 }
 
-page-dashboard .colheight {
+.colheight {
   height: 375px !important;
+  padding: 0 !important;
 }
 
-page-dashboard .rowcolheight {
+.rowcolheight {
   height: 33.3% !important;
   padding: 1px !important;
+  padding-bottom: 1% !important;
 }
 
-page-dashboard .rowcolheight1 {
+.rowcolheight1 {
   height: 15% !important;
 }
 
-page-dashboard .rowcolheight2 {
-  height: 84% !important;
-}
-
-page-dashboard .height100 {
+.rowcolheight3 {
   height: 100% !important;
 }
 
-page-dashboard .cardwidth {
-  height: 90% !important;
+.rowcolheight2 {
+  height: 84% !important;
 }
 
-page-dashboard p {
+.cardwidth {
+  height: 100% !important;
+}
+
+p {
   color: #fff !important;
 }
 
-page-dashboard p img {
+p img {
   width: 31px !important;
   height: 31px !important;
 }
 
-page-dashboard .card-content-md {
+.card-content-md {
   padding: 0 !important;
 }
 
-page-dashboard .card-md {
+.card-md {
   margin: 0 !important;
 }
 
-page-dashboard .card-md p {
-  font-size: 0.8rem;
-}
-
 @media screen and (min-width: 320px), (min-height: 568px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 327px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 111px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-width: 360px), (min-height: 600px) {
-  page-dashboard .colheight {
-    height: 395px !important;
+  .colheight {
+    height: 368px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 106px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-width: 375px), (min-height: 665px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 420px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 120px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-width: 414px), (min-height: 700px) {
-  page-dashboard .colheight {
-    height: 493px !important;
+  .colheight {
+    height: 437px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 120px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-height: 800px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 536px !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 145px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-width: 411px), (min-height: 823px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 541px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 145px !important;
+    padding-bottom: 0 !important;
   }
 }
 
 @media screen and (min-width: 411px), (min-height: 731px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 466px !important;
   }
 }
 
 @media screen and (min-height: 1024px) {
-  page-dashboard .colheight {
+  .colheight {
     height: 700px !important;
+    padding: 0 !important;
   }
-  page-dashboard .colheight80 {
+  .colheight80 {
     height: 195px !important;
+    padding-bottom: 0 !important;
   }
 }
 
-page-dashboard ion-app.md [padding] .scroll-content {
+ion-app.md [padding] .scroll-content {
   padding: 0 !important;
-}
-
-page-dashboard .footer-img {
-  height: 53px !important;
-  width: 100% !important;
 }
 
 page-faq .display-none {
@@ -37259,6 +37730,263 @@ page-library .content_html {
   color: #666666;
 }
 
+page-methods .bg-div {
+  background-image: url("../assets/img/background.jpg");
+  padding: 1.5vw 1.5vw 0;
+  line-height: 2.9vw;
+  background-repeat: round;
+}
+
+page-methods .bg-div a {
+  color: white;
+}
+
+page-methods .bg-div a:hover, page-methods .bg-div a:active, page-methods .bg-div a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-methods .button-div {
+  padding: .5vw;
+}
+
+page-methods .button-col {
+  margin-bottom: 1vw;
+}
+
+page-methods .button-sec {
+  background-color: #ffffff26;
+  border-radius: 2vw;
+}
+
+page-methods .button_logo {
+  width: auto;
+  padding: 1vw;
+}
+
+page-methods .bg-mid-img {
+  background-color: #FFFFFF;
+  border-radius: 2vw 2vw 0 0;
+  height: 100%;
+}
+
+page-methods .mid-img {
+  background-image: url("../assets/img/img1.png"), url("../assets/img/img3.png");
+  background-position: 50% 7vh, 45% 12vh;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+page-methods .bg-footer {
+  background-color: #FFFFFF;
+}
+
+page-methods .header-menu {
+  background-color: #006CA5;
+  padding: 2vw 0;
+}
+
+page-methods .contraceptive_bg {
+  padding: 1vw 2vw 17vw;
+}
+
+page-methods .section-heading {
+  padding-top: 1vw;
+}
+
+page-methods .button_dmpa {
+  background-color: #4B8BB9;
+}
+
+page-methods .button_iucd {
+  background-color: #C33E39;
+}
+
+page-methods .button_coc {
+  background-color: #CB6131;
+}
+
+page-methods .button_cent {
+  background-color: #2EA7BA;
+}
+
+page-methods .button_cond {
+  background-color: #3EA391;
+}
+
+page-methods .button_ecp {
+  background-color: #E47837;
+}
+
+page-methods .button_m_ster {
+  background-color: #82A33A;
+}
+
+page-methods .button_f_ster {
+  background-color: #7F9AA5;
+}
+
+page-methods .contraceptive_bg a {
+  color: white;
+}
+
+page-methods .contraceptive_bg a:hover, page-methods .contraceptive_bg a:active, page-methods .contraceptive_bg a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-methods .button_contra {
+  border-radius: 1vw;
+  padding: 5vw 2vw 2vw;
+}
+
+@media screen and (max-width: 425px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 12vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 14vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 3vw;
+  }
+  page-methods .mid-img {
+    height: 70vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .text-footer {
+    font-size: 2.5vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 17vw;
+  }
+  page-methods .section-heading {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 12vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 2.2vw;
+  }
+  page-methods .mid-img {
+    height: 70vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .text-footer {
+    font-size: 2vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 15vw;
+  }
+  page-methods .section-heading {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 9vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 9.5vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 2vw;
+  }
+  page-methods .mid-img {
+    height: 100%;
+    background-position: 50% 2vh, 45% 15vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 5vw;
+  }
+  page-methods .text-footer {
+    font-size: 1.5vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 8vw;
+  }
+  page-methods .section-heading {
+    font-size: 2.5vw;
+  }
+}
+
+.cl1 {
+  background: #4c8cba !important;
+}
+
+.cl2 {
+  background: #c53e3a !important;
+}
+
+.cl3 {
+  background: #cc6032 !important;
+}
+
+.cl4 {
+  background: #30a8b9 !important;
+}
+
+.cl5 {
+  background: #3fa7bb !important;
+}
+
+.cl6 {
+  background: #e57938 !important;
+}
+
+.cl7 {
+  background: #82a33a !important;
+}
+
+.cl8 {
+  background: #7f9ba7 !important;
+}
+
+.whiteImg {
+  background: #ffffff;
+}
+
+.card {
+  width: 100% !important;
+}
+
+.height-100p {
+  height: 100% !important;
+}
+
+.txtalignstart {
+  text-align: start !important;
+  font-weight: bold !important;
+  margin-left: 2% !important;
+}
+
 page-methods .border-bottom {
   border-bottom: 1px solid #873693;
   padding-bottom: 10px;
@@ -37274,6 +38002,11 @@ page-methods ion-item.item {
   padding-top: 0px;
   padding-bottom: 0px;
   color: #666666;
+}
+
+page-methods .footer-img {
+  height: 25px !important;
+  width: 30% !important;
 }
 
 page-methods ion-avatar {
@@ -37305,20 +38038,251 @@ page-methods .width-100 img {
 }
 
 page-methods .toolbar-background-md {
-  background: #006ca7 !important;
+  background: #136ca7 !important;
 }
 
 page-methods .card-md {
   border-radius: 2% !important;
 }
 
-.txt-content {
+page-methods .txt-content {
   position: absolute !important;
   bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  font-size: 20px !important;
+  font-size: 16px !important;
   color: #fff !important;
+}
+
+page-methods .height-100 {
+  height: 125px !important;
+}
+
+page-methods .img3 {
+  height: 100% !important;
+  width: 50% !important;
+  /* margin: 24% !important; */
+  margin-top: 4%;
+  /* margin-bottom: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+page-methods .height100 {
+  height: 100% !important;
+}
+
+page-methods .colset {
+  margin-right: 2% !important;
+  margin-left: 2% !important;
+}
+
+page-methods .bg-div {
+  background-image: url("../assets/img/background.jpg");
+  padding: 1.5vw 1.5vw 0;
+  line-height: 2.9vw;
+  background-repeat: round;
+}
+
+page-methods .bg-div a {
+  color: white;
+}
+
+page-methods .bg-div a:hover, page-methods .bg-div a:active, page-methods .bg-div a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-methods .button-div {
+  padding: .5vw;
+}
+
+page-methods .button-col {
+  margin-bottom: 1vw;
+}
+
+page-methods .button-sec {
+  background-color: #ffffff26;
+  border-radius: 2vw;
+}
+
+page-methods .button_logo {
+  width: auto;
+  padding: 1vw;
+}
+
+page-methods .bg-mid-img {
+  background-color: #FFFFFF;
+  border-radius: 2vw 2vw 0 0;
+  height: 100%;
+}
+
+page-methods .mid-img {
+  background-image: url("../assets/img/img1.png"), url("../assets/img/img3.png");
+  background-position: 50% 7vh, 45% 12vh;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+}
+
+page-methods .bg-footer {
+  background-color: #FFFFFF;
+}
+
+page-methods .header-menu {
+  background-color: #006CA5;
+  padding: 2vw 0;
+}
+
+page-methods .contraceptive_bg {
+  padding: 1vw 2vw 17vw;
+}
+
+page-methods .section-heading {
+  padding-top: 1vw;
+}
+
+page-methods .button_dmpa {
+  background-color: #4B8BB9;
+}
+
+page-methods .button_iucd {
+  background-color: #C33E39;
+}
+
+page-methods .button_coc {
+  background-color: #CB6131;
+}
+
+page-methods .button_cent {
+  background-color: #2EA7BA;
+}
+
+page-methods .button_cond {
+  background-color: #3EA391;
+}
+
+page-methods .button_ecp {
+  background-color: #E47837;
+}
+
+page-methods .button_m_ster {
+  background-color: #82A33A;
+}
+
+page-methods .button_f_ster {
+  background-color: #7F9AA5;
+}
+
+page-methods .contraceptive_bg a {
+  color: white;
+}
+
+page-methods .contraceptive_bg a:hover, page-methods .contraceptive_bg a:active, page-methods .contraceptive_bg a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+page-methods .button_contra {
+  border-radius: 1vw;
+  padding: 5vw 2vw 2vw;
+}
+
+@media screen and (max-width: 425px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 12vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 14vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 3vw;
+  }
+  page-methods .mid-img {
+    height: 70vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .text-footer {
+    font-size: 2.5vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 17vw;
+  }
+  page-methods .section-heading {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 12vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 2.2vw;
+  }
+  page-methods .mid-img {
+    height: 70vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 8vw;
+  }
+  page-methods .text-footer {
+    font-size: 2vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 15vw;
+  }
+  page-methods .section-heading {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  page-methods .pathfinder_logo {
+    width: auto;
+    height: 9vw;
+  }
+  page-methods .button-sec {
+    padding: 2vw 1vw 4vw;
+  }
+  page-methods .button_logo {
+    height: 9.5vw;
+  }
+  page-methods .button_text, page-methods .text-header {
+    font-size: 2vw;
+  }
+  page-methods .mid-img {
+    height: 100%;
+    background-position: 50% 2vh, 45% 15vh;
+  }
+  page-methods .footer_logo {
+    width: auto;
+    height: 5vw;
+  }
+  page-methods .text-footer {
+    font-size: 1.5vw;
+  }
+  page-methods .contraceptive_bg {
+    padding: 1vw 2vw 8vw;
+  }
+  page-methods .section-heading {
+    font-size: 2.5vw;
+  }
 }
 
 .cl1 {
@@ -37338,7 +38302,7 @@ page-methods .card-md {
 }
 
 .cl5 {
-  background: #3fa492 !important;
+  background: #3fa7bb !important;
 }
 
 .cl6 {
@@ -37361,23 +38325,8 @@ page-methods .card-md {
   width: 100% !important;
 }
 
-.height-100 {
-  height: 149px !important;
-}
-
 .height-100p {
   height: 100% !important;
-}
-
-.img3 {
-  height: 100% !important;
-  width: 50% !important;
-  /* margin: 24% !important; */
-  margin-top: 16%;
-  /* margin-bottom: auto; */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
 .txtalignstart {
@@ -37574,6 +38523,11 @@ page-topics-content .Topic-Details {
   justify-content: space-between;
 }
 
+page-topics-content .toolbar-title {
+  font-size: 1.6rem;
+  color: #ffffff !important;
+}
+
 page-topics-content .active,
 page-topics-content .dot:hover {
   background-color: #717171;
@@ -37597,6 +38551,10 @@ page-topics-content .dot {
   display: inline-block;
   -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
+}
+
+page-topics-content .toolbar-background-md {
+  background: #0162a8 !important;
 }
 
 .list-type1 {
@@ -37726,6 +38684,29 @@ body {
 page-topics-list ion-item.item {
   color: #666666;
   padding-right: 10px;
+}
+
+page-topics-list .toolbar-title {
+  font-size: 1.6rem;
+  color: #ffffff !important;
+}
+
+page-topics-list .footer-img {
+  height: 25px !important;
+  width: 30% !important;
+}
+
+page-topics-list .fclr {
+  font-size: 15px !important;
+  color: #0a5e9a !important;
+}
+
+page-topics-list .toolbar-background-md {
+  background: #136ca7 !important;
+}
+
+page-topics-list .bgcor {
+  background-color: #d59efb !important;
 }
 
 page-topics-list .inline-flex {

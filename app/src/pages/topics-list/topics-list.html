@@ -1,5 +1,77 @@
+<ion-header class="headerbg">
+  <ion-navbar>
+      <ion-row>
+          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">
+              <img class="left_img_header" src="assets/imgs/left-arrow.png" height="35px" float-left>
+              <!-- <ion-icon  name="md-arrow-round-back" (click)="gotoDashboard();"></ion-icon> -->
+          </ion-col>
+          <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">
+              <ion-title text-center>{{ pgName }}</ion-title>
+          </ion-col>
+          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">
+              <img class="right_img_header" src="assets/imgs/menu-icon.png" float-right>
+              <!-- <ion-title float-right class="font-size-14" (click)=changeLanguage(chooseLanguage)>{{chooseLanguage}}</ion-title> -->
+          </ion-col>
+      </ion-row>
+  </ion-navbar>
+</ion-header>
 <ion-content>
-  <div>
-    <img class="bgimg" (click)="gotoMethodsPage()" src="assets/imgs/123menu.jpg">
+  <ion-grid>
+    <ion-row no-padding>
+      <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding (click)="openVid();">
+        <img src="assets/imgs/dmpa-video.png">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <!-- <ion-item  text-wrap>
+        At a Glance
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item> -->
+    <div *ngFor="let d of dmpaLocal; let i=index" >
+    <ion-item text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+
+        <ion-grid>
+          <ion-row no-padding>
+            <ion-col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 no-padding class="fclr">
+                {{d.title}}
+            </ion-col>
+            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 no-padding>
+                <ion-icon [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'" style="float:right !important;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+      <div *ngIf="isGroupShown(i)">
+        <div *ngIf="d.img !== ''">
+          <img src="{{d.img}}">
+        </div>
+        <div *ngIf="d.img == ''">{{d.description}}</div>
+      </div>
+    </ion-item>
   </div>
+  </ion-list>
 </ion-content>
+<ion-footer>
+    <ion-grid class="dash_footer_Grid">
+        <ion-row>
+            <!-- <ion-col col-12>
+                <div> <img class="footer-img" src="assets/imgs/footer2.png"></div>
+            </ion-col> -->
+            <ion-col col-3>
+              <div> <img class="footer-img" src="assets/icon/home.png" (click)="goHome()"></div>
+            </ion-col>
+            <ion-col col-3>
+              <div> <img class="footer-img" src="assets/icon/Asset 1@4x-8.png"></div>
+            </ion-col>
+            <ion-col col-3>
+              <div> <img class="footer-img" src="assets/icon/faq.png" (click)="gotoFAQMethods()"></div>
+            </ion-col>
+            <ion-col col-3>
+              <div> <img class="footer-img" src="assets/icon/askus.png" (click)="gotoAskUsPage()"></div>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+</ion-footer>

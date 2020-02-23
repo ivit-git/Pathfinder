@@ -1,0 +1,458 @@
+// .bgContentColor {
+//   background-color: #5a308b !important;
+// }
+page-dashboard {
+    .display_none {
+        display: none;
+    }
+    .footer-img{
+      height: 53px !important;
+      width: 100% !important;
+    }
+    .footer-img2{
+      height: 30px !important;
+      width: 100% !important;
+    }
+    ion-navbar.toolbar {
+        padding: 1px 1px;
+    }
+    .circle img {
+        height: 30px;
+        width: 30px;
+        position: relative;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+    }
+    img.header-logo-img {
+        height: 58px;
+    }
+    .dashboard-back-img>.row {
+        height: 20%;
+        align-items: center !important;
+        display: flex !important;
+    }
+    .circle {
+        width: 55px;
+        height: 55px;
+        border-radius: 64px;
+    }
+    .dashboard-back-img {
+        height: 100%;
+        // background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../../assets/imgs/dashboard-back-img.jpg");
+        background-image: url("../assets/imgs/dashboard-back-img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 38%;
+        background-size: 53% 63%;
+    }
+    .padding-top-2-per {
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .icon_middle_one {
+        margin-top: -15%;
+        margin-left: 15%;
+    }
+    .dashboard-icon {
+        position: absolute;
+        width: 110px;
+        font-size: 12px;
+        //text-align: center;
+    }
+    // @media screen and (min-height: 700px) {
+    //     .dashboard-back-img {
+    //         background-position: 10% 40%;
+    //     }
+    // }
+    .footer-icon {
+        height: 40px;
+    }
+    .toolbar-background-md{
+      background: #fff !important;
+    }
+    .scroll-content{
+      overflow-y: hidden !important;
+    }
+    .paddingtop0 {
+      padding-top: 0 !important;
+    }
+    .paddingbottom0 {
+      padding-bottom: 0 !important;
+    }
+
+    .mar1{
+      margin-left: 1% !important;
+      margin-right: 1% !important;
+    }
+    .mar2{
+      margin-left: 2% !important;
+      margin-right: 2% !important;
+    }
+    .height100 {
+      height: 99% !important;
+    }
+    .card-md p{
+      font-size: 1.2rem !important;
+    }
+
+    .pp1 {
+      padding-right: 1% !important;
+      padding-left: 1% !important;
+    }
+
+    .pp0 {
+      padding-right: 0% !important;
+      padding-left: 0% !important;
+    }
+
+    //nitish
+
+    .bg-div{
+      background-image: url("../assets/img/background.jpg");
+      padding: 1.5vw 1.5vw 0;
+      line-height: 2.9vw;
+      background-repeat: round;
+  }
+  .bg-div a{
+      color: white;
+  }
+  .bg-div a:hover, .bg-div a:active, .bg-div a:focus{
+      color: white;
+      text-decoration: none;
+  }
+  .button-div{
+      padding: .5vw;
+  }
+  .button-col{
+      margin-bottom: 1vw;
+  }
+  .button-sec{
+      background-color: #ffffff26;
+      border-radius: 2vw;
+  }
+  .button_logo{
+      width: auto;
+      padding: 1vw;
+  }
+
+  .bg-mid-img{
+      background-color: #FFFFFF;
+      border-radius: 2vw 2vw 0 0;
+      height: 100%;
+  }
+  .mid-img{
+      background-image: url("../assets/img/img1.png"), url("../assets/img/img3.png");
+
+      background-position: 50% 7vh, 45% 12vh;
+      background-repeat: no-repeat, no-repeat;
+      background-size: contain, contain;
+  }
+  .bg-footer{
+      background-color: #FFFFFF;
+  }
+
+  .header-menu{
+      background-color: #006CA5;
+      padding: 2vw 0;
+  }
+  .contraceptive_bg {
+      padding: 1vw 2vw 17vw;
+  }
+  .section-heading{
+      padding-top: 1vw;
+  }
+  .button_dmpa{background-color: #4B8BB9;}
+  .button_iucd{background-color: #C33E39;}
+  .button_coc{background-color: #CB6131;}
+  .button_cent{background-color: #2EA7BA;}
+  .button_cond{background-color: #3EA391;}
+  .button_ecp{background-color: #E47837;}
+  .button_m_ster{background-color: #82A33A;}
+  .button_f_ster{background-color: #7F9AA5;}
+
+  .contraceptive_bg a{
+      color: white;
+  }
+  .contraceptive_bg a:hover, .contraceptive_bg a:active, .contraceptive_bg a:focus{
+      color: white;
+      text-decoration: none;
+  }
+  .button_contra{
+      border-radius: 1vw;
+      padding: 5vw 2vw 2vw;
+  }
+  @media screen and (max-width: 425px){
+      .pathfinder_logo{
+          width: auto;
+          height: 12vw;
+      }
+      .button-sec{
+          padding: 2vw 1vw 4vw;
+      }
+      .button_logo{
+          height: 14vw;
+      }
+      .button_text, .text-header {
+          font-size: 3vw;
+      }
+      .mid-img{
+          height: 70vh;
+      }
+      .footer_logo{
+          width: auto;
+          height: 8vw;
+      }
+      .text-footer{
+          font-size: 2.5vw;
+      }
+      .contraceptive_bg {
+          padding: 1vw 2vw 17vw;
+      }
+      .section-heading{
+          font-size: 4vw;
+      }
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 1024px){
+      .pathfinder_logo{
+          width: auto;
+          height: 8vw;
+      }
+      .button-sec{
+          padding: 2vw 1vw 4vw;
+      }
+      .button_logo{
+          height: 12vw;
+      }
+      .button_text, .text-header{
+          font-size: 2.2vw;
+      }
+      .mid-img{
+          height: 70vh;
+      }
+      .footer_logo{
+          width: auto;
+          height: 8vw;
+      }
+      .text-footer{
+          font-size: 2vw;
+      }
+      .contraceptive_bg {
+          padding: 1vw 2vw 15vw;
+      }
+      .section-heading{
+          font-size: 3vw;
+      }
+  }
+
+  @media screen and (min-width: 1025px){
+
+      .pathfinder_logo{
+          width: auto;
+          height: 9vw;
+      }
+      .button-sec{
+          padding: 2vw 1vw 4vw;
+      }
+      .button_logo{
+          height: 9.5vw;
+      }
+      .button_text, .text-header{
+          font-size: 2vw;
+      }
+
+      .mid-img{
+          height: 100%;
+          background-position: 50% 2vh, 45% 15vh;
+      }
+      .footer_logo{
+          width: auto;
+          height: 5vw;
+      }
+      .text-footer{
+          font-size: 1.5vw;
+      }
+      .contraceptive_bg {
+          padding: 1vw 2vw 8vw;
+      }
+      .section-heading{
+          font-size: 2.5vw;
+      }
+  }
+
+
+}
+
+.bgBlue{
+  background: #5c5da1 !important;
+}
+
+.whiteImg{
+  background: #ffffff;
+}
+
+.card{
+  width: 100% !important;
+  border-radius: 5% !important;
+}
+
+.grid{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-card img{
+  width: 50% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.colheight80{
+  height: 108px !important;
+  padding-bottom: 0 !important;
+}
+
+
+.colheight {
+  height: 375px !important;
+  padding: 0 !important;
+}
+
+.rowcolheight {
+  height: 33.3% !important;
+  padding: 1px !important;
+  padding-bottom: 1% !important;
+}
+
+.rowcolheight1 {
+  height: 15% !important;
+}
+
+.rowcolheight3 {
+  height: 100% !important;
+}
+.rowcolheight2 {
+  height: 84% !important;
+}
+
+
+
+.cardwidth {
+  height: 100% !important;
+}
+p{
+  color: #fff !important;
+}
+
+p img{
+  width: 31px !important;
+  height: 31px !important;
+}
+
+.card-content-md{
+  padding: 0 !important;
+}
+
+.card-md{
+  margin: 0 !important;
+}
+
+
+
+@media screen and (min-width: 320px) , (min-height: 568px) {
+  .colheight {
+    height: 327px !important; //changed
+    padding: 0 !important;
+  }
+  .colheight80 {
+    height: 111px !important; //changes
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 360px) , (min-height: 600px) {
+  .colheight {
+    height: 368px !important;
+    padding: 0 !important;
+  }
+
+  .colheight80 {
+    height: 106px !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 375px) , (min-height: 665px) {
+  .colheight {
+    height: 420px !important; //changed
+    padding: 0 !important;
+  }
+  .colheight80 {
+    height: 120px !important; //changes
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 414px) , (min-height: 700px) {
+  .colheight {
+    height: 437px !important; //changed
+    padding: 0 !important;
+  }
+  .colheight80 {
+    height: 120px !important; //changed
+    padding-bottom: 0 !important;
+  }
+}
+
+
+
+
+@media screen and (min-height: 800px) {
+  .colheight {
+    height: 536px !important; //changed
+  }
+  .colheight80 {
+    height: 145px !important; //changed
+    padding-bottom: 0 !important;
+  }
+}
+
+
+@media screen and (min-width: 411px) , (min-height: 823px) {
+  .colheight {
+    height: 541px !important; //changes
+    padding: 0 !important;
+  }
+  .colheight80 {
+    height: 145px !important; //changes
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 411px) ,(min-height: 731px) {
+  .colheight {
+    height: 466px !important;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .colheight {
+    height: 700px !important; //changed
+    padding: 0 !important;
+  }
+  .colheight80 {
+    height: 195px !important; //changed
+    padding-bottom: 0 !important;
+  }
+}
+
+
+
+
+
+ion-app.md [padding] .scroll-content{
+  padding: 0 !important;
+}
+
+
+
+

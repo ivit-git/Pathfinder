@@ -177,7 +177,7 @@ export class MethodsPage {
       alert("Somthing Went wrong.");
     }
   }
-  gotoTopicsListPageTest(method){
+  gotoTopicsListPageTest(method,pgName){
     const d = new Date();
     const contentType = 'ContraceptiveMethods'
     const date =  d.getFullYear().toString() + '-' + this.formatNumber((d.getMonth() + 1).toString()) + '-' + this.formatNumber(d.getDate().toString()) ;
@@ -194,16 +194,19 @@ export class MethodsPage {
       StartDateTime: startTime,
       EndDateTime: ''
     };
-    this.databaseprovider.getDatabaseState().subscribe(rdy => {
-      if (rdy) {
-        localStorage.setItem('startTimeMethod',startTime);
-        this.databaseprovider.addGetDateTime(result).then(data => {
-        })
-        // this.databaseprovider.addMethodGetTime(this.userKey.ClientUserId,this.userDetail.StackholderId,date,this.languageId,contentType,method, startTime).then(data => {
-        //   })
-      }
-    })
-    this.navCtrl.setRoot("TopicsListPage", {methodID: method});
+    this.navCtrl.setRoot("TopicsListPage", {methodID: method, pgName: pgName});
+  }
+
+  gotoFAQMethods(){
+    this.navCtrl.setRoot("FaqMethodsPage");
+  }
+
+  gotoAskUsPage(){
+    this.navCtrl.setRoot("AskUsPage")
+  }
+
+  goHome(){
+    this.navCtrl.setRoot("DashboardPage");
   }
 
 }

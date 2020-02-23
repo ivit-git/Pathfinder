@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 704:
+/***/ 703:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MethodsPageModule", function() { return MethodsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__methods__ = __webpack_require__(725);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__methods__ = __webpack_require__(724);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -35,7 +35,7 @@ MethodsPageModule = __decorate([
 
 /***/ }),
 
-/***/ 714:
+/***/ 715:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10641,7 +10641,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 715:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10652,7 +10652,7 @@ return jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(714);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(715);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10670,12 +10670,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 let AppServices = class AppServices {
-    //  public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
+    // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
     constructor(http, nav, photoViewer) {
         this.http = http;
         this.nav = nav;
         this.photoViewer = photoViewer;
-        this.serviceURl = "http://64.94.164.16/Pathfinder-Digitaltool/api/";
+        // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool/api/"
+        this.serviceURl = "https://algomtech.com/pathf/api/";
         //  this.AuthToken =  localStorage.getItem('AuthToken');
         //  // console.log(this.AuthToken);
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
@@ -10850,7 +10851,7 @@ AppServices = __decorate([
 
 /***/ }),
 
-/***/ 725:
+/***/ 724:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10858,7 +10859,7 @@ AppServices = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(716);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_service__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_text_to_speech__ = __webpack_require__(154);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11028,7 +11029,7 @@ let MethodsPage = class MethodsPage {
             alert("Somthing Went wrong.");
         }
     }
-    gotoTopicsListPageTest(method) {
+    gotoTopicsListPageTest(method, pgName) {
         const d = new Date();
         const contentType = 'ContraceptiveMethods';
         const date = d.getFullYear().toString() + '-' + this.formatNumber((d.getMonth() + 1).toString()) + '-' + this.formatNumber(d.getDate().toString());
@@ -11045,21 +11046,21 @@ let MethodsPage = class MethodsPage {
             StartDateTime: startTime,
             EndDateTime: ''
         };
-        this.databaseprovider.getDatabaseState().subscribe(rdy => {
-            if (rdy) {
-                localStorage.setItem('startTimeMethod', startTime);
-                this.databaseprovider.addGetDateTime(result).then(data => {
-                });
-                // this.databaseprovider.addMethodGetTime(this.userKey.ClientUserId,this.userDetail.StackholderId,date,this.languageId,contentType,method, startTime).then(data => {
-                //   })
-            }
-        });
-        this.navCtrl.setRoot("TopicsListPage", { methodID: method });
+        this.navCtrl.setRoot("TopicsListPage", { methodID: method, pgName: pgName });
+    }
+    gotoFAQMethods() {
+        this.navCtrl.setRoot("FaqMethodsPage");
+    }
+    gotoAskUsPage() {
+        this.navCtrl.setRoot("AskUsPage");
+    }
+    goHome() {
+        this.navCtrl.setRoot("DashboardPage");
     }
 };
 MethodsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-methods',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/methods/methods.html"*/'<ion-header class="headerbg">\n    <ion-navbar>\n        <ion-row>\n            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">\n                <img class="left_img_header" src="assets/imgs/left-arrow.png" height="35px" float-left>\n                <!-- <ion-icon  name="md-arrow-round-back" (click)="gotoDashboard();"></ion-icon> -->\n            </ion-col>\n            <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">\n                <ion-title text-center>{{setLanguage.Methods}}</ion-title>\n            </ion-col>\n            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal">\n                <img class="right_img_header" src="assets/imgs/menu-icon.png" float-right>\n                <!-- <ion-title float-right class="font-size-14" (click)=changeLanguage(chooseLanguage)>{{chooseLanguage}}</ion-title> -->\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid>\n    <ion-row text-center>\n        <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding>\n            <h4 class="txtalignstart" no-margin margin-top>SPACING</h4>\n        </ion-col>\n    </ion-row>\n    <ion-row justify-content-center align-items-center class="height100">\n      <ion-col col6 class="height-100" (click)="gotoTopicsListPageTest(1001)">\n        <ion-card class="cl1 height100">\n          <ion-card-content class="height100">\n            <ion-row justify-content-center align-items-center class="height100">\n              <ion-col col-12 class="height-100p">\n                <div class="cdiv">\n                    <p>\n                        <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                    </p>\n                    <div class="txt-content">\n                      <span float-left>DMPA</span>\n                      <span float-right>\n                          <ion-icon name="arrow-round-forward"></ion-icon>\n                      </span>\n                    </div>\n                </div>\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6 class="height-100" (click)="startDateTime(\'ContraceptiveMethods\');">\n          <ion-card class="cl2 height100">\n            <ion-card-content class="height100">\n              <ion-row justify-content-center align-items-center class="height100">\n                <ion-col col-12 class="height-100p">\n                  <div class="cdiv">\n                      <p>\n                          <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                      </p>\n                      <div class="txt-content">\n                        <span float-left>IUCD</span>\n                        <span float-right>\n                            <ion-icon name="arrow-round-forward"></ion-icon>\n                        </span>\n                      </div>\n                  </div>\n                </ion-col>\n              </ion-row>\n            </ion-card-content>\n          </ion-card>\n      </ion-col>\n      <ion-col col-6 class="height-100">\n          <ion-card class="cl3 height100">\n            <ion-card-content class="height100">\n              <ion-row justify-content-center align-items-center class="height100">\n                <ion-col col-12 class="height-100p">\n                 <div class="cdiv">\n                    <p>\n                        <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                    </p>\n                    <div class="txt-content">\n                      <span float-left>COC</span>\n                      <span float-right>\n                          <ion-icon name="arrow-round-forward"></ion-icon>\n                      </span>\n                    </div>\n                 </div>\n                </ion-col>\n              </ion-row>\n            </ion-card-content>\n          </ion-card>\n      </ion-col>\n      <ion-col col-6 class="height-100">\n          <ion-card class="cl4 height100">\n            <ion-card-content class="height100">\n              <ion-row justify-content-center align-items-center class="height100">\n                <ion-col col-12 class="height-100p">\n                 <div class="cdiv">\n                    <p>\n                        <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                    </p>\n                    <div class="txt-content">\n                      <span float-left>CENTCHROMAN</span>\n                      <span float-right>\n                          <ion-icon name="arrow-round-forward"></ion-icon>\n                      </span>\n                    </div>\n                 </div>\n                </ion-col>\n              </ion-row>\n            </ion-card-content>\n          </ion-card>\n      </ion-col>\n      <ion-col col-6 class="height-100">\n        <ion-card class="cl5 height100">\n          <ion-card-content class="height100">\n            <ion-row justify-content-center align-items-center class="height100">\n              <ion-col col-12 class="height-100p">\n               <div class="cdiv">\n                  <p>\n                      <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                  </p>\n                  <div class="txt-content">\n                    <span float-left>CONDOM</span>\n                    <span float-right>\n                        <ion-icon name="arrow-round-forward"></ion-icon>\n                    </span>\n                  </div>\n               </div>\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6 class="height-100">\n          <ion-card class="cl6 height100">\n            <ion-card-content class="height100">\n              <ion-row justify-content-center align-items-center class="height100">\n                <ion-col col-12 class="height-100p">\n                <div class="cdiv">\n                    <p>\n                        <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                    </p>\n                    <div class="txt-content">\n                      <span float-left>ECP</span>\n                      <span float-right>\n                          <ion-icon name="arrow-round-forward"></ion-icon>\n                      </span>\n                    </div>\n                </div>\n                </ion-col>\n              </ion-row>\n            </ion-card-content>\n          </ion-card>\n      </ion-col>\n    </ion-row>\n\n\n  </ion-grid>\n  <ion-grid>\n      <ion-row text-center>\n          <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding>\n              <h4 class="txtalignstart" no-margin margin-top>LIMITING</h4>\n          </ion-col>\n      </ion-row>\n      <ion-row justify-content-center align-items-center class="height100">\n        <ion-col col6 class="height-100" (click)="gotoTopicsListPageTest(1001)">\n            <ion-card class="cl7 height100">\n              <ion-card-content class="height100">\n                <ion-row justify-content-center align-items-center class="height100">\n                  <ion-col col-12 class="height-100p">\n                    <div class="cdiv">\n                        <p>\n                            <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                        </p>\n                        <div class="txt-content">\n                          <span float-left>MALE</span>\n                          <span float-right>\n                              <ion-icon name="arrow-round-forward"></ion-icon>\n                          </span>\n                        </div>\n                    </div>\n                  </ion-col>\n                </ion-row>\n              </ion-card-content>\n            </ion-card>\n          </ion-col>\n          <ion-col col6 class="height-100" (click)="gotoTopicsListPageTest(1001)">\n              <ion-card class="cl8 height100">\n                <ion-card-content class="height100">\n                  <ion-row justify-content-center align-items-center class="height100">\n                    <ion-col col-12 class="height-100p">\n                      <div class="cdiv">\n                          <p>\n                              <img src="assets/imgs/dashboard-icons/counceling.png" class="img3" />\n                          </p>\n                          <div class="txt-content">\n                            <span float-left>FEMALE</span>\n                            <span float-right>\n                                <ion-icon name="arrow-round-forward"></ion-icon>\n                            </span>\n                          </div>\n                      </div>\n                    </ion-col>\n                  </ion-row>\n                </ion-card-content>\n              </ion-card>\n            </ion-col>\n\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/methods/methods.html"*/,
+        selector: 'page-methods',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/methods/methods.html"*/'\n\n<ion-content>\n  <div class="container p-0">\n    <div class="d-flex">\n        <div class="flex-fill header-menu text-center text-light font-weight-bold">\n            <span class="text-header">CONTRACEPTIVE METHODS</span>\n        </div>\n    </div>\n    <div class="contraceptive_bg">\n        <div class="row m-0">\n            <div class="col-12 px-0 font-weight-bold section-heading">\n                <span>SPACING</span>\n            </div>\n        </div>\n        <div class="row m-0">\n            <div (click)="gotoTopicsListPageTest(\'dmpa\',\'DMPA\')" class="col-6 d-flex text-light text-center font-weight-bold button-div">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_dmpa">\n                    <img class="mx-auto d-block button_logo " src="assets/img/DMPA.png" alt="DMPA">\n                    <span class="button_text float-left">DMPA</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'IUCD\',\'IUCD\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_iucd">\n                    <img class="mx-auto d-block button_logo " src="assets/img/IUCD.png" alt="IUCD">\n                    <span class="button_text float-left">IUCD</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n        </div>\n        <div class="row m-0">\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'coc\',\'COC\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_coc">\n                    <img class="mx-auto d-block button_logo " src="assets/img/COC.png" alt="COC">\n                    <span class="button_text float-left">COC</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'centchroman\',\'CENTCHROMAN\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_cent">\n                    <img class="mx-auto d-block button_logo " src="assets/img/Centchroman.png" alt="CENTCHROMAN">\n                    <span class="button_text float-left">CENTCHROMAN</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n        </div>\n        <div class="row m-0">\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_cond">\n                    <img class="mx-auto d-block button_logo " src="assets/img/Condom.png" alt="CONDOM" (click)="gotoTopicsListPageTest(\'condom\',\'CONDOM\')">\n                    <span class="button_text float-left">CONDOM</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'ecp\',\'ECP\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_ecp">\n                    <img class="mx-auto d-block button_logo" src="assets/img/ECP.png" alt="ECP">\n                    <span class="button_text float-left">ECP</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n        </div>\n        <div class="row m-0">\n            <div class="col-12 px-0 font-weight-bold section-heading">\n                <span>LIMITING</span>\n            </div>\n        </div>\n        <div class="row m-0">\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'malesterilization\',\'Male Sterilization\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_m_ster">\n                    <img class="mx-auto d-block button_logo " src="assets/img/Male_Sterilization.png" alt="MALE STERILIZATION">\n                    <span class="button_text float-left">MALE STERILIZATION</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n            <div class="col-6 d-flex text-light text-center font-weight-bold button-div" (click)="gotoTopicsListPageTest(\'femalesterilization\',\'Female Sterilization\')">\n                <a href="javascript:void(0)" class="button_contra flex-fill button_f_ster">\n                    <img class="mx-auto d-block button_logo" src="assets/img/Fimale_Stierilization.png" alt="FEMALE STERILIZATION">\n                    <span class="button_text float-left">FEMALE STERILIZATION</span>\n                    <span class="button_text float-right"><i class=\'fas fa-arrow-right text-light\'></i></span>\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n</ion-content>\n<ion-footer>\n  <ion-grid class="dash_footer_Grid">\n      <ion-row>\n        <ion-col col-3>\n          <div> <img class="footer-img" src="assets/icon/home.png" (click)="goHome()"></div>\n        </ion-col>\n        <ion-col col-3>\n          <div> <img class="footer-img" src="assets/icon/Asset 1@4x-8.png"></div>\n        </ion-col>\n        <ion-col col-3>\n          <div> <img class="footer-img" src="assets/icon/faq.png" (click)="gotoFAQMethods()"></div>\n        </ion-col>\n        <ion-col col-3>\n          <div> <img class="footer-img" src="assets/icon/askus.png" (click)="gotoAskUsPage()"></div>\n        </ion-col>\n\n      </ion-row>\n  </ion-grid>\n</ion-footer>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/methods/methods.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */], __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* LoadingController */],

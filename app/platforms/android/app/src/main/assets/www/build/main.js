@@ -22,79 +22,79 @@ webpackEmptyAsyncContext.id = 165;
 
 var map = {
 	"../pages/ask-us/ask-us.module": [
-		695,
+		696,
 		17
 	],
 	"../pages/dashboard/dashboard.module": [
-		713,
+		712,
 		16
 	],
 	"../pages/faq-methods/faq-methods.module": [
-		696,
+		697,
 		15
 	],
 	"../pages/faq/faq.module": [
-		697,
+		698,
 		14
 	],
 	"../pages/fp-overview/fp-overview.module": [
-		698,
+		699,
 		13
 	],
 	"../pages/home/home.module": [
-		699,
+		700,
 		12
 	],
 	"../pages/incentives/incentives.module": [
-		700,
+		701,
 		11
 	],
 	"../pages/key-content/key-content.module": [
-		701,
+		702,
 		10
 	],
 	"../pages/key-message/key-message.module": [
-		702,
+		705,
 		9
 	],
 	"../pages/library/library.module": [
-		703,
+		714,
 		8
 	],
 	"../pages/methods/methods.module": [
-		704,
+		703,
 		7
 	],
 	"../pages/modal/modal.module": [
-		705,
+		704,
 		18
 	],
 	"../pages/quiz-category/quiz-category.module": [
-		711,
+		709,
 		0
 	],
 	"../pages/quiz/quiz.module": [
-		706,
+		707,
 		6
 	],
 	"../pages/tool-one/tool-one.module": [
-		707,
+		706,
 		5
 	],
 	"../pages/tool-two/tool-two.module": [
-		708,
+		713,
 		4
 	],
 	"../pages/topics-content/topics-content.module": [
-		712,
+		710,
 		3
 	],
 	"../pages/topics-list/topics-list.module": [
-		709,
+		711,
 		2
 	],
 	"../pages/user-profile/user-profile.module": [
-		710,
+		708,
 		1
 	]
 };
@@ -987,13 +987,13 @@ DatabaseProvider = __decorate([
 
 /***/ }),
 
-/***/ 361:
+/***/ 362:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(367);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1001,35 +1001,37 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 366:
+/***/ 367:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file_transfer__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file_transfer__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__ = __webpack_require__(357);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_sqlite__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_database_service__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_sqlite_porter__ = __webpack_require__(305);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_text_to_speech__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_component__ = __webpack_require__(694);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_device__ = __webpack_require__(356);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ionic_img_viewer__ = __webpack_require__(357);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_photo_viewer__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_zip__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_component__ = __webpack_require__(695);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_device__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_video_player_ngx__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ionic_img_viewer__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_photo_viewer__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_zip__ = __webpack_require__(361);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1068,21 +1070,21 @@ AppModule = __decorate([
                     { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/incentives/incentives.module#IncentivesPageModule', name: 'IncentivesPage', segment: 'incentives', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/key-content/key-content.module#KeyContentPageModule', name: 'KeyContentPage', segment: 'key-content', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/key-message/key-message.module#KeyMessagePageModule', name: 'KeyMessagePage', segment: 'key-message', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/library/library.module#LibraryPageModule', name: 'LibraryPage', segment: 'library', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/methods/methods.module#MethodsPageModule', name: 'MethodsPage', segment: 'methods', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/quiz/quiz.module#QuizPageModule', name: 'QuizPage', segment: 'quiz', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/key-message/key-message.module#KeyMessagePageModule', name: 'KeyMessagePage', segment: 'key-message', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tool-one/tool-one.module#ToolOnePageModule', name: 'ToolOnePage', segment: 'tool-one', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tool-two/tool-two.module#ToolTwoPageModule', name: 'ToolTwoPage', segment: 'tool-two', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/topics-list/topics-list.module#TopicsListPageModule', name: 'TopicsListPage', segment: 'topics-list', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/quiz/quiz.module#QuizPageModule', name: 'QuizPage', segment: 'quiz', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/user-profile/user-profile.module#UserProfilePageModule', name: 'UserProfilePage', segment: 'user-profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/quiz-category/quiz-category.module#QuizCategoryPageModule', name: 'QuizCategoryPage', segment: 'quiz-category', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/topics-content/topics-content.module#TopicsContentPageModule', name: 'TopicsContentPage', segment: 'topics-content', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/topics-list/topics-list.module#TopicsListPageModule', name: 'TopicsListPage', segment: 'topics-list', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tool-two/tool-two.module#ToolTwoPageModule', name: 'ToolTwoPage', segment: 'tool-two', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/library/library.module#LibraryPageModule', name: 'LibraryPage', segment: 'library', priority: 'low', defaultHistory: [] }
                 ]
             }),
-            __WEBPACK_IMPORTED_MODULE_15_ionic_img_viewer__["b" /* IonicImageViewerModule */]
+            __WEBPACK_IMPORTED_MODULE_16_ionic_img_viewer__["b" /* IonicImageViewerModule */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["k" /* IonicApp */]],
         entryComponents: [
@@ -1097,9 +1099,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__ionic_native_sqlite_porter__["a" /* SQLitePorter */],
             __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__["a" /* File */],
             __WEBPACK_IMPORTED_MODULE_6__ionic_native_file_transfer__["a" /* FileTransfer */],
+            __WEBPACK_IMPORTED_MODULE_15__ionic_native_video_player_ngx__["a" /* VideoPlayer */],
             __WEBPACK_IMPORTED_MODULE_12__ionic_native_text_to_speech__["a" /* TextToSpeech */],
-            __WEBPACK_IMPORTED_MODULE_16__ionic_native_photo_viewer__["a" /* PhotoViewer */],
-            __WEBPACK_IMPORTED_MODULE_17__ionic_native_zip__["a" /* Zip */],
+            __WEBPACK_IMPORTED_MODULE_17__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+            __WEBPACK_IMPORTED_MODULE_18__ionic_native_zip__["a" /* Zip */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["l" /* IonicErrorHandler */] },
         ]
     })
@@ -1109,7 +1112,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 694:
+/***/ 695:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1158,7 +1161,7 @@ let MyApp = class MyApp {
     }
 };
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/app/app.html"*/'<div *ngIf="showSplash" class="showSplash">\n    <img src="assets/imgs/demo-ready3.gif">\n    <!-- <div class="spinner">\n        <div class="cube1"></div>\n        <div class="cube2"></div>\n    </div> -->\n</div>\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/app/app.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/app/app.html"*/'<div *ngIf="showSplash" class="showSplash">\n    <img src="assets/imgs/1_landing_page.png">\n    <!-- <div class="spinner">\n        <div class="cube1"></div>\n        <div class="cube2"></div>\n    </div> -->\n</div>\n<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/app/app.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_4__providers_app_enum__["a" /* AppEnum */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_4__providers_app_enum__["a" /* AppEnum */],
@@ -1169,5 +1172,5 @@ MyApp = __decorate([
 
 /***/ })
 
-},[361]);
+},[362]);
 //# sourceMappingURL=main.js.map

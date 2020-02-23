@@ -743,6 +743,9 @@ checkExtension(filename){
   gotoFAQMethods(){
     this.navCtrl.setRoot("FaqMethodsPage");
   }
+  gotoTopicsListPageTest(method,pgName){
+    this.navCtrl.setRoot("TopicsListPage", {methodID: method, pgName: pgName});
+  }
   startDateTime(contentType) {
     const d = new Date();
     const date =  d.getFullYear().toString() + '-' + this.formatNumber((d.getMonth() + 1).toString()) + '-' + this.formatNumber(d.getDate().toString()) ;

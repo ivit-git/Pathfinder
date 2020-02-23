@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="paramarsh.PathFinder.com" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>The Family Planning App</name>
-    <description>PathFinder awesome Ionic/Cordova app.</description>
-    <author email="hamendrasingh@paramarsh.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="nitish.algomtech.com" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Family Planning Test</name>
+    <description>Algomtech awesome Ionic/Cordova app.</description>
+    <author email="jhanitish1990@gmail.com" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -99,5 +99,4 @@
     <plugin name="cordova-sqlite-storage" spec="^2.6.0" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.2.1" />
     <engine name="browser" spec="5.0.4" />
-    <engine name="android" spec="7.1.4" />
 </widget>

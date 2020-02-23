@@ -2,9 +2,31 @@
   width: 100% !important;
 }
 page-topics-list {
+    .row{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
     ion-item.item {
         color: $gray_color;
         padding-right: 10px;
+    }
+    .toolbar-title {
+        font-size: 1.6rem;
+        color: #ffffff !important;
+    }
+    .footer-img{
+      height: 25px !important;
+      width: 30% !important;
+    }
+    .fclr{
+      font-size: 15px !important;
+      color: #0a5e9a !important;
+    }
+    .toolbar-background-md{
+      background: #136ca7 !important;
+    }
+    .bgcor{
+      background-color: #d59efb !important;
     }
     // .item p {
     //     // font-size: 1.4rem;

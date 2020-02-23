@@ -4,7 +4,7 @@
             "outputFile": "/home/nitish/Documents/pathfinder/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
             "map": [
                 {
-                    "source": "/home/nitish/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/6f6bfdfb42074738207a8750407c913f/res/values-lv/values-lv.xml",
+                    "source": "/home/nitish/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/684d0e58aee50db189b133e259289fb5/res/values-lv/values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 707:
+/***/ 710:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopicsListPageModule", function() { return TopicsListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__topics_list__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__topics_list__ = __webpack_require__(731);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -35,7 +35,7 @@ TopicsListPageModule = __decorate([
 
 /***/ }),
 
-/***/ 714:
+/***/ 715:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10641,7 +10641,7 @@ return jQuery;
 
 /***/ }),
 
-/***/ 715:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10652,7 +10652,7 @@ return jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(714);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery__ = __webpack_require__(715);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jquery__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10670,12 +10670,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 let AppServices = class AppServices {
-    //  public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
+    // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool-DEV/api/"
     constructor(http, nav, photoViewer) {
         this.http = http;
         this.nav = nav;
         this.photoViewer = photoViewer;
-        this.serviceURl = "http://64.94.164.16/Pathfinder-Digitaltool/api/";
+        // public serviceURl= "http://64.94.164.16/Pathfinder-Digitaltool/api/"
+        this.serviceURl = "https://algomtech.com/pathf/api/";
         //  this.AuthToken =  localStorage.getItem('AuthToken');
         //  // console.log(this.AuthToken);
         this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
@@ -10850,7 +10851,7 @@ AppServices = __decorate([
 
 /***/ }),
 
-/***/ 728:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10858,8 +10859,10 @@ AppServices = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app_service__ = __webpack_require__(716);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_service__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(357);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10875,17 +10878,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 let TopicsListPage = class TopicsListPage {
-    constructor(navCtrl, modalCtrl, navParams, platform, eNumValue, loadingCtrl, _appService, databaseprovider) {
+    constructor(navCtrl, modalCtrl, navParams, platform, eNumValue, loadingCtrl, transfer, file, _appService, databaseprovider) {
         this.navCtrl = navCtrl;
         this.modalCtrl = modalCtrl;
         this.navParams = navParams;
         this.eNumValue = eNumValue;
         this.loadingCtrl = loadingCtrl;
+        this.transfer = transfer;
+        this.file = file;
         this._appService = _appService;
         this.databaseprovider = databaseprovider;
         this.setLanguage = { noDataFound: "" };
         this.langOption = ["English", "हिंदी", "मराठी"];
+        this.fileTransfer = this.transfer.create();
+        this.timg = '';
+        this.pgName = '';
+        this.dmpaLocal = [];
+        this.menuList = [
+            { title: "At a Glance", img: 'assets/imgs/5_DMPA-At_a_glance.png', description: "Type 1 diabetes is an autoimmune disease in which the body’s immune system attacks and destroys the beta cells in the pancreas that make insulin.", show: false },
+            { title: "Technicle Update", img: 'assets/imgs/4_DMPA_Technical_update.png', description: "Multiple sclerosis (MS) is an autoimmune disease in which the body's immune system mistakenly attacks myelin, the fatty substance that surrounds and protects the nerve fibers in the central nervous system.", show: false },
+            { title: "Effectiveness", img: 'assets/imgs/8_DMPA_Effectiveness.png', description: "Crohn's disease and ulcerative colitis (UC), both also known as inflammatory bowel diseases (IBD), are autoimmune diseases in which the body's immune system attacks the intestines.", show: false },
+            { title: "Benefits", img: 'assets/imgs/9_DMPA_benifits.png', description: "Systemic lupus erythematosus (lupus) is a chronic, systemic autoimmune disease which can damage any part of the body, including the heart, joints, skin, lungs, blood vessels, liver, kidneys and nervous system.", show: false },
+            { title: "Limitations", img: 'assets/imgs/6_DMPA-Limitation.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Screening Parameters", img: 'assets/imgs/7_DMPA-Screening_Parameters.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Rulling Out Pregnacy", img: 'assets/imgs/10_DMPA_Ruling_out_Pregnancy.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Went To Start DMPA", img: 'assets/imgs/11_DMPA_WhentoStart_DMPA-01.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Counseling", img: 'assets/imgs/12_DMPA_Counseling.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Storage Of DMPA Vials", img: 'assets/imgs/13_DMPA_Storage_of_DMPA_Vials.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "How to Administer DMPA", img: 'assets/imgs/14_DMPA_How_to_Administer_DMPA-IM.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Follow-up Care", img: 'assets/imgs/15_Follow-up_Care.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Management Of Side Effects", img: 'assets/imgs/16_DMPA_Management_of_Side Effects.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Other Issue", img: 'assets/imgs/17_DMPA_Other_Issues.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false }
+        ];
+        this.menuListServer2 = [
+            { title: "At a Glance", img: '5_DMPA-At_a_glance.png', description: "Type 1 diabetes is an autoimmune disease in which the body’s immune system attacks and destroys the beta cells in the pancreas that make insulin.", show: false },
+            { title: "Technicle Update", img: '4_DMPA_Technical_update.png', description: "Multiple sclerosis (MS) is an autoimmune disease in which the body's immune system mistakenly attacks myelin, the fatty substance that surrounds and protects the nerve fibers in the central nervous system.", show: false },
+            { title: "Effectiveness", img: '8_DMPA_Effectiveness.png', description: "Crohn's disease and ulcerative colitis (UC), both also known as inflammatory bowel diseases (IBD), are autoimmune diseases in which the body's immune system attacks the intestines.", show: false },
+            { title: "Benefits", img: '9_DMPA_benifits.png', description: "Systemic lupus erythematosus (lupus) is a chronic, systemic autoimmune disease which can damage any part of the body, including the heart, joints, skin, lungs, blood vessels, liver, kidneys and nervous system.", show: false },
+            { title: "Limitations", img: '6_DMPA-Limitation.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Screening Parameters", img: '7_DMPA-Screening_Parameters.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Rulling Out Pregnacy", img: '10_DMPA_Ruling_out_Pregnancy.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Went To Start DMPA", img: '11_DMPA_WhentoStart_DMPA-01.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Counseling", img: '12_DMPA_Counseling.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Storage Of DMPA Vials", img: '13_DMPA_Storage_of_DMPA_Vials.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "How to Administer DMPA", img: '14_DMPA_How_to_Administer_DMPA-IM.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Follow-up Care", img: '15_Follow-up_Care.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Management Of Side Effects", img: '16_DMPA_Management_of_Side Effects.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false },
+            { title: "Other Issue", img: '17_DMPA_Other_Issues.png', description: "Rheumatoid arthritis (RA) is an autoimmune disease in which the body's immune system mistakenly begins to attack its own tissues, primarily the synovium, the membrane that lines the joints.", show: false }
+        ];
+        this.shownGroup = null;
         this.loadingPopup = this.loadingCtrl.create({
             spinner: 'hide',
             content: `
@@ -10917,18 +10961,66 @@ let TopicsListPage = class TopicsListPage {
             this.languageId = "3";
         }
         var methodID = this.navParams.get('methodID');
-        this.databaseprovider.getDatabaseState().subscribe(rdy => {
-            if (rdy) {
-                this.loadingPopup.present();
-                this.databaseprovider.getTopics(methodID, this.languageId).then(data => {
-                    this.loadingPopup.dismiss();
-                    this.TopicList = data;
-                    this.MethodName = data[0].MethodName;
-                    //alert(JSON.stringify(data))
-                }, err => {
+        this.pgName = this.navParams.get('pgName');
+        /*this.databaseprovider.getDatabaseState().subscribe(rdy => {
+          if (rdy) {
+            this.loadingPopup.present();
+               this.databaseprovider.getTopics(methodID,this.languageId).then(data => {
+                this.loadingPopup.dismiss();
+                this.TopicList=data;
+                this.MethodName=data[0].MethodName;
+              },err => {
+                this.loadingPopup.dismiss();
+               });
+    
+          }
+        })*/
+        if (localStorage.getItem(methodID + "ContentList")) {
+            this.dmpaLocal = JSON.parse(localStorage.getItem(methodID + "ContentList"));
+        }
+        if (this.dmpaLocal.length <= 0) {
+            this.getDList(methodID);
+        }
+    }
+    getDList(value) {
+        this.loadingPopup = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: `
+      <div class="preloader">
+        <div class="loader"></div>
+      </div>`
+        });
+        this.loadingPopup.present();
+        var URLDistrictsByStateId = 'contraceptiveMethods/' + value;
+        this._appService.getData_new(URLDistrictsByStateId).subscribe(data => {
+            //this.loadingPopup.dismiss();
+            this.menuListServer = data.data;
+            //this.loadingPopup.present();
+            let i = 0;
+            this.dmpaLocal = [];
+            console.log('data.data', data.data);
+            console.log('this.menuListServer', this.menuListServer);
+            for (let list of this.menuListServer) {
+                //const url = 'https://algomtech.com/pathf/uploads/dmpa/11_DMPA_WhentoStart_DMPA-01.png';
+                const url = list.image_path + list.img;
+                console.log('this.url', url);
+                this.fileTransfer.download(url, this.file.dataDirectory + list.type_name + list.img).then((entry) => {
+                    console.log('download complete: ' + entry.toURL());
+                    //alert('download complete: ' + entry.toURL());
+                    this.dmpaLocal[i] = { 'title': list.title, 'img': entry.toURL(), 'show': false };
+                    localStorage.setItem(value + "ContentList", JSON.stringify(this.dmpaLocal));
+                    i++;
+                    if (i === this.menuListServer.length) {
+                        this.loadingPopup.dismiss();
+                    }
+                    //this.timg = entry.toURL();
+                }, (error) => {
+                    // handle error
                     this.loadingPopup.dismiss();
                 });
             }
+        }, err => {
+            this.loadingPopup.dismiss();
         });
     }
     openModal() {
@@ -10936,6 +11028,20 @@ let TopicsListPage = class TopicsListPage {
         var modalPage = this.modalCtrl.create('ModalPage', data);
         modalPage.present();
     }
+    toggleGroup(group) {
+        // if (this.isGroupShown(group)) {
+        //     this.shownGroup = null;
+        // } else {
+        //     this.shownGroup = group;
+        // }
+        this.menuList[group].show = !this.menuList[group].show;
+    }
+    ;
+    isGroupShown(group) {
+        //return this.shownGroup === group;
+        return this.menuList[group].show;
+    }
+    ;
     changeLanguage(chooseLanguage) {
         var result = this._appService.changeLanguage(chooseLanguage);
         if (result) {
@@ -10971,7 +11077,7 @@ let TopicsListPage = class TopicsListPage {
     }
     gotoDashboard() {
         this.updateGetTIme();
-        this.navCtrl.setRoot("DashboardPage");
+        this.navCtrl.setRoot("MethodsPage");
     }
     onSelectChange(selectedValue) {
         console.log('Selected', selectedValue);
@@ -10983,14 +11089,31 @@ let TopicsListPage = class TopicsListPage {
             alert("Somthing Went wrong.");
         }
     }
+    gotoFAQMethods() {
+        this.navCtrl.setRoot("FaqMethodsPage");
+    }
+    gotoAskUsPage() {
+        this.navCtrl.setRoot("AskUsPage");
+    }
+    goHome() {
+        this.navCtrl.setRoot("DashboardPage");
+    }
 };
 TopicsListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-topics-list',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/topics-list/topics-list.html"*/'<ion-content>\n  <div>\n    <img class="bgimg" (click)="gotoMethodsPage()" src="assets/imgs/123menu.jpg">\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/topics-list/topics-list.html"*/,
+        selector: 'page-topics-list',template:/*ion-inline-start:"/home/nitish/Documents/pathfinder/src/pages/topics-list/topics-list.html"*/'<ion-header class="headerbg">\n  <ion-navbar>\n      <ion-row>\n          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">\n              <img class="left_img_header" src="assets/imgs/left-arrow.png" height="35px" float-left>\n              <!-- <ion-icon  name="md-arrow-round-back" (click)="gotoDashboard();"></ion-icon> -->\n          </ion-col>\n          <ion-col col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 class="vertical_align_middle">\n              <ion-title text-center>{{ pgName }}</ion-title>\n          </ion-col>\n          <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 class="padding-horizontal" (click)="gotoDashboard();">\n              <img class="right_img_header" src="assets/imgs/menu-icon.png" float-right>\n              <!-- <ion-title float-right class="font-size-14" (click)=changeLanguage(chooseLanguage)>{{chooseLanguage}}</ion-title> -->\n          </ion-col>\n      </ion-row>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <ion-grid>\n    <ion-row no-padding>\n      <ion-col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 no-padding (click)="openVid();">\n        <img src="assets/imgs/dmpa-video.png">\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list>\n    <!-- <ion-item  text-wrap>\n        At a Glance\n        <ion-icon name="ios-arrow-forward" item-end></ion-icon>\n    </ion-item> -->\n    <div *ngFor="let d of dmpaLocal; let i=index" >\n    <ion-item text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">\n\n        <ion-grid>\n          <ion-row no-padding>\n            <ion-col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 no-padding class="fclr">\n                {{d.title}}\n            </ion-col>\n            <ion-col col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 no-padding>\n                <ion-icon [name]="isGroupShown(i) ? \'arrow-down\' : \'arrow-forward\'" style="float:right !important;"></ion-icon>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n\n\n      <div *ngIf="isGroupShown(i)">\n        <div *ngIf="d.img !== \'\'">\n          <img src="{{d.img}}">\n        </div>\n        <div *ngIf="d.img == \'\'">{{d.description}}</div>\n      </div>\n    </ion-item>\n  </div>\n  </ion-list>\n</ion-content>\n<ion-footer>\n    <ion-grid class="dash_footer_Grid">\n        <ion-row>\n            <!-- <ion-col col-12>\n                <div> <img class="footer-img" src="assets/imgs/footer2.png"></div>\n            </ion-col> -->\n            <ion-col col-3>\n              <div> <img class="footer-img" src="assets/icon/home.png" (click)="goHome()"></div>\n            </ion-col>\n            <ion-col col-3>\n              <div> <img class="footer-img" src="assets/icon/Asset 1@4x-8.png"></div>\n            </ion-col>\n            <ion-col col-3>\n              <div> <img class="footer-img" src="assets/icon/faq.png" (click)="gotoFAQMethods()"></div>\n            </ion-col>\n            <ion-col col-3>\n              <div> <img class="footer-img" src="assets/icon/askus.png" (click)="gotoAskUsPage()"></div>\n            </ion-col>\n\n        </ion-row>\n    </ion-grid>\n</ion-footer>\n'/*ion-inline-end:"/home/nitish/Documents/pathfinder/src/pages/topics-list/topics-list.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */], __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */], __WEBPACK_IMPORTED_MODULE_4__providers_database_service__["a" /* DatabaseProvider */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_app_enum__["a" /* AppEnum */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_transfer__["a" /* FileTransfer */],
+        __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__["a" /* File */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_app_service__["a" /* AppServices */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_database_service__["a" /* DatabaseProvider */]])
 ], TopicsListPage);
 
 //# sourceMappingURL=topics-list.js.map
